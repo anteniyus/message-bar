@@ -13,7 +13,7 @@ const store = createStore(snackbarReducer, applyMiddleware(thunk))
 export const ExampleComponent = ({ text }) => {
   return (
     <Provider store={store}>
-      <Snackbar  />
+      <Snackbar />
       <General />
       <div className={styles.test}>Example Component: {text}</div>
     </Provider>
