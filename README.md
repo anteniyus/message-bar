@@ -23,16 +23,16 @@ const store = createStore(snackbarReducer, applyMiddleware(thunk));
 ```jsx
 import { createStore, applyMiddleware } from 'redux';
 import snackbarReducer from './components/Snackbar/SnackbarReducer';
-import { Provider } from 'react-redux'; //NEW
+import { Provider } from 'react-redux'; /* Add this */
 
 const store = createStore(snackbarReducer, applyMiddleware(thunk));
 
-export const ExampleComponent = ({ text }) => {
+export const ExampleComponent = () => {
   return (
-    <Provider store={store}> //Add this
-      <Snackbar /> //Add this
+    <Provider store={store}> {/* Add this */}
+      <Snackbar /> {/* Add this */}
       ... //Other stuff
-    </Provider> //Add this
+    </Provider> /* Add this */
   )
 }
 ```
